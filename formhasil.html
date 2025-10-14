@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hasil Pemesanan Barang</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .form-container { border: 1px solid #ccc; padding: 15px; width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 10px; display: flex; align-items: center; }
+        .form-group label { width: 120px; text-align: right; margin-right: 10px; }
+        .form-group input[type="text"], .form-group select { flex-grow: 1; padding: 5px; }
+        .form-group input[type="checkbox"] { margin-right: 5px; }
+        .upload-box { 
+            width: 120px; 
+            height: 120px; 
+            border: 2px solid black; 
+            background-color: #f0f0f0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 20px; 
+            overflow: hidden; 
+        }
+        .upload-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-tabs { border-bottom: 1px solid #ccc; margin-bottom: 15px; padding-bottom: 5px; }
+        .header-tabs span { padding: 0 10px; }
+        .button-group { text-align: center; margin-top: 20px; }
+        .button-group button { padding: 10px 20px; background-color: #5c4caf; color: white; border: none; cursor: pointer; }
+        a { color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="header-tabs">
+        <span>Home</span> | <span>Generate Link</span> | <span>Transaction History</span> | <span>Policy</span> | <span>Logout</span>
+    </div>
+
+    <h2>Form Hasil Pemesanan Barang</h2>
+    <form action="#" method="post">
+        
+        <div style="display: flex;">
+            <div style="margin-right: 30px; text-align:center;">
+                <!-- Menampilkan gambar dari folder -->
+                <div class="upload-box">
+                    <img src="sepatu.jpeg" alt="Foto Produk">
+                </div>
+                <label for="upload">Upload Picture</label>
+                <input type="file" id="upload" name="upload" style="display: none;">
+            </div>
+
+            <div>
+                <div class="form-group">
+                    <label for="title">Title Here</label>
+                    <input type="text" id="title" name="title" value="Adidas AdiZero SL">
+                </div>
+                <div class="form-group">
+                    <label for="desc">Description</label>
+                    <input type="text" id="desc" name="desc" value="sepatu">
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <input type="text" value="">
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <input type="text" value="">
+                </div>
+                
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+
+                <div class="form-group">
+                    <label for="acc_num">Account Number</label>
+                    <input type="text" id="acc_num" name="acc_num" value="09876788999">
+                </div>
+                <div class="form-group">
+                    <label for="bank">Bank</label>
+                    <select id="bank" name="bank">
+                        <option>Mandiri</option>
+                        <option>BRI</option>
+                        <option>BNI</option>
+                        <option selected>BCA</option>
+                        <option>Bank Lain</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="acc_holder">Account Holder</label>
+                    <input type="text" id="acc_holder" name="acc_holder" value="Madu">
+                </div>
+                <div class="form-group">
+                    <label for="transaction">Transaction</label>
+                    <select id="transaction" name="transaction">
+                        <option value="3_person" selected>3</option>
+                        <option value="2_person">2</option>
+                    </select>
+                    <span style="font-size: 0.8em; margin-left: 10px;">*The transaction is for 3 person, choose 3 from the drop-down list</span>
+                </div>
+                
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+
+                <div class="form-group">
+                    <label></label>
+                    <div>
+                        <input type="checkbox" id="send_mobile" name="send_mobile" checked>
+                        <label for="send_mobile" style="width: auto; text-align: left;">Send to Mobile Phone</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="send_mobile_num">Send to Mobile Phone</label>
+                    <input type="text" id="send_mobile_num" name="send_mobile_num" value="098765679">
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <div>
+                        <input type="checkbox" id="send_email_chk" name="send_email_chk" checked>
+                        <label for="send_email_chk" style="width: auto; text-align: left;">Send to Email</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="send_email_addr">Send to Email</label>
+                    <input type="text" id="send_email_addr" name="send_email_addr" value="maduagnia237898@gmail.com">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="button-group">
+            <button type="submit"><a href="praktikum2B.html">Next</a></button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
