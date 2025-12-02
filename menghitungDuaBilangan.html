@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Jumlah Dua Bilangan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ee60d8;
+        }
+        .container {
+            background-color: rgb(246, 242, 245);
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 350px;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .operator, .equals {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 5px 0;
+            display: block;
+        }
+        hasil {
+            font-weight: bold;
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <input type="number" id="bil1" value="0" onchange="hitungJumlah()" placeholder="Bil1">
+    <span class="operator">+</span>
+    <input type="number" id="bil2" value="0" onchange="hitungJumlah()" placeholder="Bil2">
+    <span class="equals">=</span>
+    <input type="number" id="hasil" value="0" readonly>
+</div>
+
+<script>
+    function hitungJumlah() {
+        const inputBil1 = document.getElementById('bil1');
+        const inputBil2 = document.getElementById('bil2');
+        const inputHasil = document.getElementById('hasil');
+        const nilai1 = parseFloat(inputBil1.value) || 0;
+        const nilai2 = parseFloat(inputBil2.value) || 0;
+        const total = nilai1 + nilai2;
+        inputHasil.value = total;
+    }
+    document.addEventListener('DOMContentLoaded', hitungJumlah);
+</script>
+
+</body>
+</html>
