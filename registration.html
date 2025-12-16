@@ -1,163 +1,85 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi Seminar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        
-        .gender-group {
-            display: flex;
-            gap: 20px;
-            margin-top: 5px;
-        }
-        
-        .gender-option {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #fe80c7;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        
-        button:hover {
-            background-color: #e95382;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Registrasi Seminar / Workshop</h1>
-    
-    <form id="registrationForm">
-        <div class="form-group">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" placeholder="Masukkan nama lengkap">
-        </div>
-        
-        <div class="form-group">
-            <label for="tempat">Tempat Lahir</label>
-            <input type="text" id="tempat" placeholder="Masukkan tempat lahir">
-        </div>
-        
-        <div class="form-group">
-            <label for="tanggal">Tanggal Lahir</label>
-            <input type="date" id="tanggal" value="2016-05-12">
-        </div>
-        
-        <div class="form-group">
-            <label>Gender</label>
-            <div class="gender-group">
-                <div class="gender-option">
-                    <input type="radio" id="laki" name="gender" value="Laki-Laki">
-                    <label for="laki">Laki-Laki</label>
-                </div>
-                <div class="gender-option">
-                    <input type="radio" id="perempuan" name="gender" value="Perempuan">
-                    <label for="perempuan">Perempuan</label>
-                </div>
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="nama@contoh.com">
-        </div>
-        
-        <div class="form-group">
-            <label for="status">Status Peserta</label>
-            <select id="status">
-                <option value="">Select</option>
-                <option value="Mahasiswa">Mahasiswa</option>
-                <option value="Dosen">Dosen</option>
-                <option value="Umum">Umum</option>
-            </select>
-        </div>
-        
-        <button type="submit">Daftar</button>
-    </form>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Ambil data dari form
-            const nama = document.getElementById('nama').value;
-            const tempat = document.getElementById('tempat').value;
-            const tanggal = document.getElementById('tanggal').value;
-            const gender = document.querySelector('input[name="gender"]:checked');
-            const email = document.getElementById('email').value;
-            const status = document.getElementById('status').value;
-            
-            // Validasi sederhana
-            if (!nama || !tempat || !tanggal || !gender || !email || !status) {
-                alert('Harap lengkapi semua data!');
-                return;
-            }
-            
-            // Format tanggal untuk ditampilkan
-            const dateObj = new Date(tanggal);
-            const options = { day: 'numeric', month: 'long', year: 'numeric' };
-            const formattedDate = dateObj.toLocaleDateString('id-ID', options);
-            
-            // Tampilkan data yang diisi
-            const message = `
-                Pendaftaran Berhasil!
-                
-                Data yang Anda masukkan:
-                Nama: ${nama}
-                Tempat Lahir: ${tempat}
-                Tanggal Lahir: ${formattedDate}
-                Gender: ${gender.value}
-                Email: ${email}
-                Status: ${status}
-            `;
-            
-            alert(message);
-            
-            // Reset form (opsional)
-            // this.reset();
-            // document.getElementById('tanggal').value = '2016-05-12';
-        });
-    </script>
+<form>
+  <div class="form-group row">
+    <label for="text1" class="col-4 col-form-label">Kode</label> 
+    <div class="col-8">
+      <input id="text1" name="text1" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">Nama Kegiatan</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-address-card"></i>
+          </div>
+        </div> 
+        <input id="text" name="text" type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text2" class="col-4 col-form-label">Tanggal Mulai</label> 
+    <div class="col-8">
+      <input id="text2" name="text2" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text3" class="col-4 col-form-label">Tanggal Akhir</label> 
+    <div class="col-8">
+      <input id="text3" name="text3" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text4" class="col-4 col-form-label">Biaya</label> 
+    <div class="col-8">
+      <input id="text4" name="text4" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text5" class="col-4 col-form-label">Tempat</label> 
+    <div class="col-8">
+      <input id="text5" name="text5" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="select" class="col-4 col-form-label">Jenis Kegiatan</label> 
+    <div class="col-8">
+      <select id="select" name="select" class="custom-select">
+        <option value="">Seminar</option>
+        <option value="">Workshop</option>
+        <option value="">TalkShow</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text6" class="col-4 col-form-label">Pic</label> 
+    <div class="col-8">
+      <input id="text6" name="text6" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="textarea" class="col-4 col-form-label">Deskripsi</label> 
+    <div class="col-8">
+      <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
 </body>
 </html>
